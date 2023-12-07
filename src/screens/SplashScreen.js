@@ -19,7 +19,7 @@ const SplashScreen = ({navigation}) => {
     // Redirect to the main screen after a delay
     const timeoutId = setTimeout(() => {
       navigation.navigate('LogInScreen'); // Replace with the name of your main screen
-    }, 2000); // Adjust the delay as needed
+    }, 3000); // Adjust the delay as needed
 
     // Clean up the timeout on unmount
     return () => clearTimeout(timeoutId);
@@ -39,9 +39,9 @@ const SplashScreen = ({navigation}) => {
         <View>
           <Text style={[styles.welcomeText]}>Welcome to</Text>
           <Image
-            source={require('../images/logo_white.png')}
+            source={require('../images/logo_white2.png')}
             style={{
-              width: 470,
+              width: 350,
               height: 130,
               alignSelf: 'center',
               marginTop: 40,
@@ -49,7 +49,11 @@ const SplashScreen = ({navigation}) => {
           />
         </View>
         <View style={[styles.bottomText]}>
-          <Text>Ministry of</Text>
+          <Text style={{color: 'white', fontSize: 12}}>Ministry of</Text>
+          <Image
+            source={require('../images/watoto_white2.png')}
+            size={{width: 100, height: 44}}
+          />
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -65,21 +69,14 @@ const styles = StyleSheet.create({
     height: '100%',
   },
   welcomeText: {
-    marginTop: 200,
+    marginTop: 150,
     color: 'white',
     fontSize: 20,
     alignSelf: 'center',
   },
-  signupLink: {
-    marginTop: 180,
+  bottomText: {
+    alignItems: 'center',
     color: 'white',
-    alignSelf: 'center',
+    marginTop: 150,
   },
-  sloganText: {
-    marginTop: 20,
-    color: 'white',
-    fontSize: 20,
-    alignSelf: 'center',
-  },
-  bottomText: {},
 });
