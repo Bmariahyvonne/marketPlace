@@ -47,6 +47,11 @@ const HomeStack = () => {
         name="VerifyScreen"
         component={VerifyScreen}
       />
+      <Stack.Screen
+        options={{headerShown: false}}
+        name="ProfileScreen"
+        component={ProfileScreen}
+      />
     </Stack.Navigator>
   );
 };
