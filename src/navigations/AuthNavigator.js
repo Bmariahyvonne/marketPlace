@@ -14,7 +14,7 @@ import {
   faCalendar,
   faEnvelope,
   faUser,
-  faHouse
+  faHouse,
 } from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 
@@ -100,13 +100,22 @@ const AuthNavigator = () => {
         component={ProfileScreen}
       />
       <Stack.Screen
-        options={{headerShown: false}}
+        // options={{headerShown: false}}
+        options={{
+          title: 'Resource Bank',
+          headerStyle: {
+            backgroundColor: '#224589',// Set the background color for Screen 1
+          },
+          headerTintColor: 'white',
+          headerTitleStyle: {
+            alignSelf: 'center', // Center the title
+          },
+        }}
         name="ResourceScreen"
         component={ResourceScreen}
       />
     </Stack.Navigator>
   );
 };
-
 
 export default AuthNavigator;
