@@ -9,6 +9,7 @@ import HomeScreen from '../screens/HomeScreen';
 import EventsScreen from '../screens/EventsScreen';
 import MessageScreen from '../screens/MessageScreen';
 import ProfileScreen from '../screens/ProfileScreen';
+import ResourceScreen from '../screens/ResourceScreen';
 import {
   faCalendar,
   faEnvelope,
@@ -97,6 +98,11 @@ const AuthNavigator = () => {
         options={{headerShown: false}}
         name="ProfileScreen"
         component={ProfileScreen}
+      />
+      <Stack.Screen
+        options={{headerShown: false}}
+        name="ResourceScreen"
+        component={ResourceScreen}
       />
     </Stack.Navigator>
   );
