@@ -21,42 +21,6 @@ const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
 const HomeStack = () => {
   return (
-    <Stack.Navigator>
-      <Stack.Screen
-        options={{headerShown: false}}
-        name="SplashScreen"
-        component={SplashScreen}
-      />
-      <Stack.Screen
-        options={{headerShown: false}}
-        name="LogInScreen"
-        component={LogInScreen}
-      />
-      <Stack.Screen
-        options={{headerShown: false}}
-        name="HomeScreen"
-        component={HomeScreen}
-      />
-      <Stack.Screen
-        options={{headerShown: false}}
-        name="SignUpScreen"
-        component={SignUpScreen}
-      />
-      <Stack.Screen
-        options={{headerShown: false}}
-        name="VerifyScreen"
-        component={VerifyScreen}
-      />
-      <Stack.Screen
-        options={{headerShown: false}}
-        name="ProfileScreen"
-        component={ProfileScreen}
-      />
-    </Stack.Navigator>
-  );
-};
-const AuthNavigator = () => {
-  return (
     <Tab.Navigator>
       <Tab.Screen
         options={{
@@ -66,7 +30,7 @@ const AuthNavigator = () => {
           ),
         }}
         name="Home"
-        component={HomeStack}
+        component={HomeScreen}
       />
       <Tab.Screen
         options={{
@@ -101,5 +65,42 @@ const AuthNavigator = () => {
     </Tab.Navigator>
   );
 };
+const AuthNavigator = () => {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
+        options={{headerShown: false}}
+        name="SplashScreen"
+        component={SplashScreen}
+      />
+      <Stack.Screen
+        options={{headerShown: false}}
+        name="LogInScreen"
+        component={LogInScreen}
+      />
+      <Stack.Screen
+        options={{headerShown: false}}
+        name="HomeScreen"
+        component={HomeScreen}
+      />
+      <Stack.Screen
+        options={{headerShown: false}}
+        name="SignUpScreen"
+        component={SignUpScreen}
+      />
+      <Stack.Screen
+        options={{headerShown: false}}
+        name="VerifyScreen"
+        component={VerifyScreen}
+      />
+      <Stack.Screen
+        options={{headerShown: false}}
+        name="ProfileScreen"
+        component={ProfileScreen}
+      />
+    </Stack.Navigator>
+  );
+};
+
 
 export default AuthNavigator;
