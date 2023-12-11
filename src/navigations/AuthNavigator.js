@@ -12,6 +12,8 @@ import ProfileScreen from '../screens/ProfileScreen';
 import ResourceScreen from '../screens/ResourceScreen';
 import ArticleListScreen from '../screens/ArticleListScreen';
 import SingleArticleScreen from '../screens/SingleArticleScreen';
+import SingleBlogScreen from '../screens/SingleBlogScreen';
+import BlogListScreen from '../screens/BlogListScreen';
 import {
   faCalendar,
   faEnvelope,
@@ -102,11 +104,10 @@ const AuthNavigator = () => {
         component={ProfileScreen}
       />
       <Stack.Screen
-        // options={{headerShown: false}}
         options={{
           title: 'Resource Bank',
           headerStyle: {
-            backgroundColor: '#224589',// Set the background color for Screen 1
+            backgroundColor: '#224589', // Set the background color for Screen 1
           },
           headerTintColor: 'white',
           headerTitleStyle: {
@@ -117,11 +118,10 @@ const AuthNavigator = () => {
         component={ResourceScreen}
       />
       <Stack.Screen
-        // options={{headerShown: false}}
         options={{
           title: 'Articles',
           headerStyle: {
-            backgroundColor: '#224589',// Set the background color for Screen 1
+            backgroundColor: '#224589', // Set the background color for Screen 1
           },
           headerTintColor: 'white',
           headerTitleStyle: {
@@ -132,11 +132,10 @@ const AuthNavigator = () => {
         component={ArticleListScreen}
       />
       <Stack.Screen
-        // options={{headerShown: false}}
         options={{
           title: 'Article',
           headerStyle: {
-            backgroundColor: '#224589',// Set the background color for Screen 1
+            backgroundColor: '#224589', // Set the background color for Screen 1
           },
           headerTintColor: 'white',
           headerTitleStyle: {
@@ -145,6 +144,34 @@ const AuthNavigator = () => {
         }}
         name="SingleArticleScreen"
         component={SingleArticleScreen}
+      />
+      <Stack.Screen
+        options={{
+          title: 'Blogs',
+          headerStyle: {
+            backgroundColor: '#224589', // Set the background color for Screen 1
+          },
+          headerTintColor: 'white',
+          headerTitleStyle: {
+            alignSelf: 'center', // Center the title
+          },
+        }}
+        name="BlogListScreen"
+        component={BlogListScreen}
+      />
+      <Stack.Screen
+        options={{
+          title: 'Blog',
+          headerStyle: {
+            backgroundColor: '#224589', // Set the background color for Screen 1
+          },
+          headerTintColor: 'white',
+          headerTitleStyle: {
+            alignSelf: 'center', // Center the title
+          },
+        }}
+        name="SingleBlogScreen"
+        component={SingleBlogScreen}
       />
     </Stack.Navigator>
   );
