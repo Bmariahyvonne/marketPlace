@@ -55,7 +55,7 @@ const VerifyScreen = props => {
           />
           <Text style={[styles.verifyText]}>
             To verify your account, please enter the OTP sent to
-            beatrice@gmail.com
+            b******e@gmail.com
           </Text>
         </View>
         <View style={[styles.codeRow]}>

@@ -49,7 +49,7 @@ const SplashScreen = ({navigation}) => {
           />
         </View>
         <View style={[styles.bottomText]}>
-          <Text style={{color: 'white', fontSize: 12}}>Ministry of</Text>
+          <Text style={{color: 'white', fontSize: 12}}>A Ministry Of</Text>
           <Image
             source={require('../images/watoto_white2.png')}
             size={{width: 100, height: 44}}

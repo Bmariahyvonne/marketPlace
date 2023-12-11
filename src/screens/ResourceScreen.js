@@ -48,7 +48,7 @@ const ResourceScreen = props => {
               <Text style={{color: '#224589', fontWeight: '700', fontSize: 14}}>
                 Articles
               </Text>
-              <TouchableOpacity>
+              <TouchableOpacity onPress={() => navigation.navigate('ArticleListScreen')}>
                 <Text
                   style={{color: '#224589', fontWeight: '400', fontSize: 10}}>
                   View All
@@ -56,7 +56,7 @@ const ResourceScreen = props => {
               </TouchableOpacity>
             </View>
             <View>
-              <TouchableOpacity>
+              <TouchableOpacity onPress={() => navigation.navigate('SingleArticleScreen')}>
                 <View style={[styles.resourceData]}>
                   <View
                     style={{
@@ -118,7 +118,7 @@ const ResourceScreen = props => {
                   </View>
                 </View>
               </TouchableOpacity>
-              <TouchableOpacity>
+              <TouchableOpacity onPress={() => navigation.navigate('SingleArticleScreen')}>
                 <View style={[styles.resourceData]}>
                   <View
                     style={{

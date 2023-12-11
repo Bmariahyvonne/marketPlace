@@ -10,6 +10,8 @@ import EventsScreen from '../screens/EventsScreen';
 import MessageScreen from '../screens/MessageScreen';
 import ProfileScreen from '../screens/ProfileScreen';
 import ResourceScreen from '../screens/ResourceScreen';
+import ArticleListScreen from '../screens/ArticleListScreen';
+import SingleArticleScreen from '../screens/SingleArticleScreen';
 import {
   faCalendar,
   faEnvelope,
@@ -113,6 +115,36 @@ const AuthNavigator = () => {
         }}
         name="ResourceScreen"
         component={ResourceScreen}
+      />
+      <Stack.Screen
+        // options={{headerShown: false}}
+        options={{
+          title: 'Articles',
+          headerStyle: {
+            backgroundColor: '#224589',// Set the background color for Screen 1
+          },
+          headerTintColor: 'white',
+          headerTitleStyle: {
+            alignSelf: 'center', // Center the title
+          },
+        }}
+        name="ArticleListScreen"
+        component={ArticleListScreen}
+      />
+      <Stack.Screen
+        // options={{headerShown: false}}
+        options={{
+          title: '',
+          headerStyle: {
+            backgroundColor: '#224589',// Set the background color for Screen 1
+          },
+          headerTintColor: 'white',
+          headerTitleStyle: {
+            alignSelf: 'center', // Center the title
+          },
+        }}
+        name="SingleArticleScreen"
+        component={SingleArticleScreen}
       />
     </Stack.Navigator>
   );
