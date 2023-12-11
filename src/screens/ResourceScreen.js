@@ -24,19 +24,24 @@ const ResourceScreen = props => {
         backgroundColor="#224589"
         barStyle="light-content"
       />
+      <View style={[styles.searchBar]}>
+        <FontAwesomeIcon icon={faSearch} size={20} color="#898484" />
+        <TextInput
+          style={styles.textInput}
+          placeholder="Search"
+          placeholderTextColor="#898484"
+        />
+      </View>
+      <Text
+        style={{
+          color: '#224589',
+          fontWeight: '700',
+          fontSize: 14,
+          marginLeft: 20,
+        }}>
+        Latest Posts
+      </Text>
       <ScrollView style={[styles.wholePage]}>
-        <View style={[styles.searchBar]}>
-          <FontAwesomeIcon icon={faSearch} size={20} color="#898484" />
-          <TextInput
-            style={styles.textInput}
-            placeholder="Search"
-            placeholderTextColor="#898484"
-          />
-        </View>
-
-        <Text style={{color: '#224589', fontWeight: '700', fontSize: 14}}>
-          Latest Posts
-        </Text>
         <View>
           {/* Articles */}
           <View style={[styles.resouceRow]}>
@@ -347,7 +352,8 @@ const ResourceScreen = props => {
               <Text style={{color: '#224589', fontWeight: '700', fontSize: 14}}>
                 Podcasts
               </Text>
-              <TouchableOpacity onPress={() => navigation.navigate('PodcastListScreen')}>
+              <TouchableOpacity
+                onPress={() => navigation.navigate('PodcastListScreen')}>
                 <Text
                   style={{color: '#224589', fontWeight: '400', fontSize: 10}}>
                   View All
@@ -355,7 +361,8 @@ const ResourceScreen = props => {
               </TouchableOpacity>
             </View>
             <View>
-              <TouchableOpacity onPress={() => navigation.navigate('SinglePodcastScreen')}>
+              <TouchableOpacity
+                onPress={() => navigation.navigate('SinglePodcastScreen')}>
                 <View style={[styles.resourceData]}>
                   <View
                     style={{
@@ -426,7 +433,8 @@ const ResourceScreen = props => {
                   </View>
                 </View>
               </TouchableOpacity>
-              <TouchableOpacity onPress={() => navigation.navigate('SinglePodcastScreen')}>
+              <TouchableOpacity
+                onPress={() => navigation.navigate('SinglePodcastScreen')}>
                 <View style={[styles.resourceData]}>
                   <View
                     style={{

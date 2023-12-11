@@ -27,15 +27,101 @@ const PodcastListScreen = props => {
         backgroundColor="#224589"
         barStyle="light-content"
       />
+      <View style={[styles.searchBar]}>
+        <FontAwesomeIcon icon={faSearch} size={20} color="#898484" />
+        <TextInput
+          style={styles.textInput}
+          placeholder="Search"
+          placeholderTextColor="#898484"
+        />
+      </View>
       <ScrollView style={[styles.wholePage]}>
-        <View style={[styles.searchBar]}>
-          <FontAwesomeIcon icon={faSearch} size={20} color="#898484" />
-          <TextInput
-            style={styles.textInput}
-            placeholder="Search"
-            placeholderTextColor="#898484"
-          />
+        <View style={[styles.resouceRow]}>
+          <TouchableOpacity
+            onPress={() => navigation.navigate('SinglePodcastScreen')}>
+            <View style={[styles.resourceData]}>
+              <View style={[styles.podcastImagePlaceholder]}></View>
+              <View
+                style={{
+                  height: 75,
+                  width: '75%',
+                  borderRadius: 5,
+                  marginLeft: 15,
+                  marginTop: 11,
+                }}>
+                <Text style={styles.podcastTitle}>MIRIAM THE OVERCOMER</Text>
+                <View
+                  style={{
+                    flexDirection: 'row',
+                    justifyContent: 'space-between',
+                  }}>
+                  <Text style={styles.podcastSubtittle}>
+                    Miriam faced struggles and loss early in life.
+                  </Text>
+                  <TouchableOpacity onPress={playPodcast}>
+                    <FontAwesomeIcon
+                      icon={faPlayCircle}
+                      color="#999999"
+                      size={21}
+                    />
+                  </TouchableOpacity>
+                </View>
+                <View
+                  style={{
+                    flexDirection: 'row',
+                    justifyContent: 'space-between',
+                  }}>
+                  <Text style={styles.podcastDetails}>Nov 16 2023</Text>
+                  <Text style={styles.podcastDetails}>20min</Text>
+                </View>
+              </View>
+            </View>
+          </TouchableOpacity>
         </View>
+
+        <View style={[styles.resouceRow]}>
+          <TouchableOpacity
+            onPress={() => navigation.navigate('SinglePodcastScreen')}>
+            <View style={[styles.resourceData]}>
+              <View style={[styles.podcastImagePlaceholder]}></View>
+              <View
+                style={{
+                  height: 75,
+                  width: '75%',
+                  borderRadius: 5,
+                  marginLeft: 15,
+                  marginTop: 11,
+                }}>
+                <Text style={styles.podcastTitle}>MIRIAM THE OVERCOMER</Text>
+                <View
+                  style={{
+                    flexDirection: 'row',
+                    justifyContent: 'space-between',
+                  }}>
+                  <Text style={styles.podcastSubtittle}>
+                    Miriam faced struggles and loss early in life.
+                  </Text>
+                  <TouchableOpacity onPress={playPodcast}>
+                    <FontAwesomeIcon
+                      icon={faPlayCircle}
+                      color="#999999"
+                      size={21}
+                    />
+                  </TouchableOpacity>
+                </View>
+                <View
+                  style={{
+                    flexDirection: 'row',
+                    justifyContent: 'space-between',
+                  }}>
+                  <Text style={styles.podcastDetails}>Nov 16 2023</Text>
+                  <Text style={styles.podcastDetails}>20min</Text>
+                </View>
+              </View>
+            </View>
+          </TouchableOpacity>
+        </View>
+
         <View style={[styles.resouceRow]}>
           <TouchableOpacity
             onPress={() => navigation.navigate('SinglePodcastScreen')}>
@@ -347,7 +433,7 @@ const styles = StyleSheet.create({
   wholePage: {
     backgroundColor: '#F1F3F6',
     paddingHorizontal: 20,
-    height: '100%',
+    height: '90%',
   },
   searchBar: {
     borderColor: '#A6A4A4',
