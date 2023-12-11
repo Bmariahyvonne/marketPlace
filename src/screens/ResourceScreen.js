@@ -335,6 +335,8 @@ const ResourceScreen = props => {
               </TouchableOpacity>
             </View>
           </View>
+
+          {/* Podcasts */}
           <View style={[styles.resouceRow]}>
             <View
               style={{
@@ -345,7 +347,7 @@ const ResourceScreen = props => {
               <Text style={{color: '#224589', fontWeight: '700', fontSize: 14}}>
                 Podcasts
               </Text>
-              <TouchableOpacity>
+              <TouchableOpacity onPress={() => navigation.navigate('PodcastListScreen')}>
                 <Text
                   style={{color: '#224589', fontWeight: '400', fontSize: 10}}>
                   View All
@@ -353,7 +355,7 @@ const ResourceScreen = props => {
               </TouchableOpacity>
             </View>
             <View>
-              <TouchableOpacity>
+              <TouchableOpacity onPress={() => navigation.navigate('SinglePodcastScreen')}>
                 <View style={[styles.resourceData]}>
                   <View
                     style={{
@@ -424,7 +426,7 @@ const ResourceScreen = props => {
                   </View>
                 </View>
               </TouchableOpacity>
-              <TouchableOpacity>
+              <TouchableOpacity onPress={() => navigation.navigate('SinglePodcastScreen')}>
                 <View style={[styles.resourceData]}>
                   <View
                     style={{
