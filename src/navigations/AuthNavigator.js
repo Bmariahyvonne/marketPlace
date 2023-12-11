@@ -134,7 +134,7 @@ const AuthNavigator = () => {
       <Stack.Screen
         // options={{headerShown: false}}
         options={{
-          title: '',
+          title: 'Article',
           headerStyle: {
             backgroundColor: '#224589',// Set the background color for Screen 1
           },
