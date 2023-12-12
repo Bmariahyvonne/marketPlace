@@ -54,7 +54,8 @@ const HomeScreen = props => {
               <Text style={[styles.whiteText]}>Resource Bank</Text>
             </TouchableOpacity>
             <TouchableOpacity
-              style={[styles.cubes, {backgroundColor: '#A0D2DB'}]}>
+              style={[styles.cubes, {backgroundColor: '#A0D2DB'}]}
+              onPress={() => navigation.navigate('MyMarketplaceScreen')}>
               <Text style={[styles.blueText]}>My Marketplace</Text>
             </TouchableOpacity>
           </View>

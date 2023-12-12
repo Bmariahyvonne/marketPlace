@@ -16,6 +16,9 @@ import SingleBlogScreen from '../screens/SingleBlogScreen';
 import BlogListScreen from '../screens/BlogListScreen';
 import PodcastListScreen from '../screens/PodcastListScreen';
 import SinglePodcastScreen from '../screens/SinglePodcastScreen';
+import MyMarketplaceScreen from '../screens/MyMarketplaceScreen';
+import ConnectRequestsScreen from '../screens/ConnectRequestsScreen';
+import RequestDetailsScreen from '../screens/RequestDetailsScreen';
 import {
   faCalendar,
   faEnvelope,
@@ -202,6 +205,48 @@ const AuthNavigator = () => {
         }}
         name="SinglePodcastScreen"
         component={SinglePodcastScreen}
+      />
+      <Stack.Screen
+        options={{
+          title: 'My Marketplace',
+          headerStyle: {
+            backgroundColor: '#224589',
+          },
+          headerTintColor: 'white',
+          headerTitleStyle: {
+            alignSelf: 'center',
+          },
+        }}
+        name="MyMarketplaceScreen"
+        component={MyMarketplaceScreen}
+      />
+      <Stack.Screen
+        options={{
+          title: 'My Marketplace',
+          headerStyle: {
+            backgroundColor: '#224589',
+          },
+          headerTintColor: 'white',
+          headerTitleStyle: {
+            alignSelf: 'center',
+          },
+        }}
+        name="ConnectRequestsScreen"
+        component={ConnectRequestsScreen}
+      />
+      <Stack.Screen
+        options={{
+          title: 'My Marketplace',
+          headerStyle: {
+            backgroundColor: '#224589',
+          },
+          headerTintColor: 'white',
+          headerTitleStyle: {
+            alignSelf: 'center',
+          },
+        }}
+        name="RequestDetailsScreen"
+        component={RequestDetailsScreen}
       />
     </Stack.Navigator>
   );
