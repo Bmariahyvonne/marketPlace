@@ -30,11 +30,14 @@ const LogInScreen = props => {
         </View>
 
         <TouchableOpacity style={[styles.topLinkButton]}>
-          <FontAwesomeIcon
-            icon={faGoogle}
-            size={25}
-            color="red"
-            style={styles.googleIcon}
+          <Image
+            source={require('../images/google.png')}
+            style={{
+              width: 30,
+              height: 30,
+              alignSelf: 'center',
+              marginRight: 10,
+            }}
           />
           <Text style={[styles.buttonText]}>Sign in with Google</Text>
         </TouchableOpacity>
@@ -48,7 +51,7 @@ const LogInScreen = props => {
           <Text style={[styles.buttonText]}>Sign in with Facebook</Text>
         </TouchableOpacity>
 
-        <View style={{flexDirection: 'row', flex: 1, padding: 20}}>
+        <View style={{flexDirection: 'row', flex: 1, padding: 20, justifyContent: 'space-around'}}>
           <View style={[styles.borderLine]}></View>
           <View style={[styles.borderLine3]}>
             <Text style={{fontSize: 20}}>Or</Text>
@@ -167,7 +170,7 @@ const styles = StyleSheet.create({
     borderLeftColor: 'white',
     borderRightColor: 'white',
     borderTopColor: 'white',
-    width: 100,
+    width: '32%',
     justifyContent: 'center',
     alignItems: 'center',
     alignSelf: 'left',
@@ -180,7 +183,7 @@ const styles = StyleSheet.create({
     borderLeftColor: 'white',
     borderRightColor: 'white',
     borderTopColor: 'white',
-    width: 100,
+    width: '32%',
     justifyContent: 'center',
     alignItems: 'center',
     alignSelf: 'left',

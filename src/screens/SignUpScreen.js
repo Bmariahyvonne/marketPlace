@@ -54,11 +54,14 @@ const SignUpScreen = props => {
         </View>
 
         <TouchableOpacity style={[styles.topLinkButton]}>
-          <FontAwesomeIcon
-            icon={faGoogle}
-            size={25}
-            color="red"
-            style={styles.googleIcon}
+          <Image
+            source={require('../images/google.png')}
+            style={{
+              width: 25,
+              height: 25,
+              alignSelf: 'center',
+              marginRight: 10,
+            }}
           />
           <Text style={[styles.buttonText]}>Sign up with Google</Text>
         </TouchableOpacity>
@@ -72,7 +75,7 @@ const SignUpScreen = props => {
           <Text style={[styles.buttonText]}>Sign up with Facebook</Text>
         </TouchableOpacity>
 
-        <View style={{flexDirection: 'row', flex: 1, padding: 20}}>
+        <View style={{flexDirection: 'row', flex: 1, padding: 20, justifyContent: 'space-around'}}>
           <View style={[styles.borderLine]}></View>
           <View style={[styles.borderLine3]}>
             <Text style={{fontSize: 20}}>Or</Text>
@@ -93,6 +96,7 @@ const SignUpScreen = props => {
               style={styles.textInput}
               placeholder="Phone Number"
               placeholderTextColor="#737070"
+              keyboardType="numeric"
             />
           </View>
           <View style={styles.inputView}>
@@ -116,6 +120,13 @@ const SignUpScreen = props => {
             />
           </View>
 
+          <View style={styles.inputView}>
+            <TextInput
+              style={styles.textInput}
+              placeholder="NIN"
+              placeholderTextColor="#737070"
+            />
+          </View>
           <View style={styles.inputView}>
             <TextInput
               style={styles.textInput}
@@ -171,7 +182,7 @@ const styles = StyleSheet.create({
     color: '#224589',
     fontSize: 20,
     alignSelf: 'center',
-    paddingTop: 40,
+    paddingTop: 25,
   },
   topLinkButton: {
     height: 40,
@@ -222,7 +233,7 @@ const styles = StyleSheet.create({
     borderLeftColor: 'white',
     borderRightColor: 'white',
     borderTopColor: 'white',
-    width: 100,
+    width: '32%',
     justifyContent: 'center',
     alignItems: 'center',
     alignSelf: 'left',
@@ -235,7 +246,7 @@ const styles = StyleSheet.create({
     borderLeftColor: 'white',
     borderRightColor: 'white',
     borderTopColor: 'white',
-    width: 100,
+    width: '32%',
     justifyContent: 'center',
     alignItems: 'center',
     alignSelf: 'left',
