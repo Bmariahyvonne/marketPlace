@@ -10,24 +10,15 @@ import {
   TextInput,
 } from 'react-native';
 import React from 'react';
-import {faEnvelope, faImage} from '@fortawesome/free-regular-svg-icons';
+import {faImage} from '@fortawesome/free-regular-svg-icons';
 import {
-  faCircle,
   faPencil,
-  faPlus,
-  faGlobe,
   faMessage,
 } from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
-import {faLinkedin} from '@fortawesome/free-brands-svg-icons';
 
 const CorporateProfileScreen = props => {
   const {navigation} = props;
-  const openWebPage = url => {
-    Linking.openURL(url).catch(error =>
-      console.error('Error opening web page:', error),
-    );
-  };
   return (
     <SafeAreaView>
       <StatusBar
@@ -267,12 +258,6 @@ const styles = StyleSheet.create({
     fontWeight: '400',
     marginBottom: 5,
   },
-  userCompany: {
-    color: 'black',
-    fontSize: 12,
-    fontWeight: '400',
-    marginBottom: 5,
-  },
   userLocation: {
     color: 'black',
     fontSize: 11,
@@ -283,30 +268,6 @@ const styles = StyleSheet.create({
     color: '#224589',
     fontSize: 13,
     fontWeight: '700',
-  },
-  addExperience: {
-    color: '#224589',
-    fontSize: 13,
-    fontWeight: '400',
-    marginLeft: 10,
-  },
-  positionTitle: {
-    color: '#224589',
-    fontSize: 11,
-    fontWeight: '700',
-    marginTop: 1,
-  },
-  positionLocation: {
-    color: '#3D3C3C',
-    fontSize: 11,
-    fontWeight: '400',
-    marginTop: 1,
-  },
-  positionTime: {
-    color: '#898484',
-    fontSize: 11,
-    fontWeight: '400',
-    marginTop: 1,
   },
   headerBar: {
     alignItems: 'flex-end',
