@@ -24,17 +24,9 @@ import {
   faEnvelope,
   faUser,
   faHouse,
-  faBars,
 } from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
-import {createDrawerNavigator} from '@react-navigation/drawer';
-import {
-  NavigationContainer,
-  useNavigation,
-  DrawerActions,
-} from '@react-navigation/native';
-import {TouchableOpacity} from 'react-native-gesture-handler';
-import DrawerContent from './DrawerContent';
+import { createDrawerNavigator } from '@react-navigation/drawer';
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -85,8 +77,7 @@ const HomeStack = () => {
     </Tab.Navigator>
   );
 };
-const StackNav = () => {
-  const navigation = useNavigation();
+const AuthNavigator = () => {
   return (
     <Stack.Navigator
       screenOptions={{
@@ -212,14 +203,6 @@ const StackNav = () => {
             backgroundColor: '#224589',
           },
           headerTintColor: 'white',
-          headerLeft: () => {
-            return (
-              <TouchableOpacity
-                onPress={() => navigation.dispatch(DrawerActions.openDrawer())}>
-                <FontAwesomeIcon icon={faBars} size={30} color="white" />
-              </TouchableOpacity>
-            );
-          },
         }}
         name="MyMarketplaceScreen"
         component={MyMarketplaceScreen}
@@ -248,20 +231,6 @@ const StackNav = () => {
       />
     </Stack.Navigator>
   );
-};
-
-const DrawerNav = () => {
-  return (
-    <Drawer.Navigator
-      drawerContent={props => <DrawerContent {...props} />}
-      screenOptions={{headerShown: false}}>
-      <Drawer.Screen name="Home" component={StackNav} />
-    </Drawer.Navigator>
-  );
-};
-
-const AuthNavigator = () => {
-  return <DrawerNav />;
 };
 
 export default AuthNavigator;
