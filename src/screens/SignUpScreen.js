@@ -12,7 +12,7 @@ import {
 } from 'react-native';
 import React, {useState} from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
-import {faGoogle, faFacebook} from '@fortawesome/free-brands-svg-icons';
+import {faFacebook} from '@fortawesome/free-brands-svg-icons';
 import {Dropdown} from 'react-native-element-dropdown';
 import RadioButtonRN from 'radio-buttons-react-native';
 
