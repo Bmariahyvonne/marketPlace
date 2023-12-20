@@ -144,8 +144,8 @@ const CorporateProfileScreen = props => {
               }}></View>
             <View style={{flexDirection: 'row'}}>
               <Text style={styles.reactionText}>7 Reactions </Text>
-              <Text>-</Text>
-              <Text> 1 comment</Text>
+              <Text style={styles.reactionText}>-</Text>
+              <Text style={styles.reactionText}> 1 comment</Text>
             </View>
           </View>
         </View>
@@ -166,12 +166,12 @@ const CorporateProfileScreen = props => {
               }}></View>
             <View style={{flexDirection: 'row'}}>
               <Text style={styles.reactionText}>7 Reactions </Text>
-              <Text>-</Text>
-              <Text> 1 comment</Text>
+              <Text style={styles.reactionText}>-</Text>
+              <Text style={styles.reactionText}> 1 comment</Text>
             </View>
           </View>
         </View>
-        
+
       </ScrollView>
     </SafeAreaView>
   );
