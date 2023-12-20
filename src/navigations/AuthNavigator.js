@@ -19,6 +19,8 @@ import SinglePodcastScreen from '../screens/SinglePodcastScreen';
 import MyMarketplaceScreen from '../screens/MyMarketplaceScreen';
 import ConnectRequestsScreen from '../screens/ConnectRequestsScreen';
 import RequestDetailsScreen from '../screens/RequestDetailsScreen';
+import MyProfileScreen from '../screens/MyProfileScreen';
+import CorporateProfileScreen from '../screens/CorporateProfileScreen';
 import {
   faCalendar,
   faEnvelope,
@@ -223,6 +225,44 @@ const StackNav = () => {
         }}
         name="MyMarketplaceScreen"
         component={MyMarketplaceScreen}
+      />
+      <Stack.Screen
+        options={{
+          title: 'My Profiles',
+          headerStyle: {
+            backgroundColor: '#224589',
+          },
+          headerTintColor: 'white',
+          headerLeft: () => {
+            return (
+              <TouchableOpacity
+                onPress={() => navigation.dispatch(DrawerActions.openDrawer())}>
+                <FontAwesomeIcon icon={faBars} size={30} color="white" />
+              </TouchableOpacity>
+            );
+          },
+        }}
+        name="MyProfileScreen"
+        component={MyProfileScreen}
+      />
+      <Stack.Screen
+        options={{
+          title: 'My Profiles',
+          headerStyle: {
+            backgroundColor: '#224589',
+          },
+          headerTintColor: 'white',
+          headerLeft: () => {
+            return (
+              <TouchableOpacity
+                onPress={() => navigation.dispatch(DrawerActions.openDrawer())}>
+                <FontAwesomeIcon icon={faBars} size={30} color="white" />
+              </TouchableOpacity>
+            );
+          },
+        }}
+        name="CorporateProfileScreen"
+        component={CorporateProfileScreen}
       />
       <Stack.Screen
         options={{
