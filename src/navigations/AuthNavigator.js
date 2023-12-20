@@ -77,7 +77,10 @@ const HomeStack = () => {
 };
 const AuthNavigator = () => {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator
+      screenOptions={{
+        headerTitleAlign: 'center',
+      }}>
       <Stack.Screen
         options={{headerShown: false}}
         name="SplashScreen"
@@ -115,9 +118,6 @@ const AuthNavigator = () => {
             backgroundColor: '#224589', // Set the background color for Screen 1
           },
           headerTintColor: 'white',
-          headerTitleStyle: {
-            alignSelf: 'center', // Center the title
-          },
         }}
         name="ResourceScreen"
         component={ResourceScreen}
@@ -157,9 +157,6 @@ const AuthNavigator = () => {
             backgroundColor: '#224589',
           },
           headerTintColor: 'white',
-          headerTitleStyle: {
-            alignSelf: 'center',
-          },
         }}
         name="BlogListScreen"
         component={BlogListScreen}
@@ -171,9 +168,6 @@ const AuthNavigator = () => {
             backgroundColor: '#224589',
           },
           headerTintColor: 'white',
-          headerTitleStyle: {
-            alignSelf: 'center',
-          },
         }}
         name="SingleBlogScreen"
         component={SingleBlogScreen}
@@ -185,9 +179,6 @@ const AuthNavigator = () => {
             backgroundColor: '#224589',
           },
           headerTintColor: 'white',
-          headerTitleStyle: {
-            alignSelf: 'center',
-          },
         }}
         name="PodcastListScreen"
         component={PodcastListScreen}
@@ -199,9 +190,6 @@ const AuthNavigator = () => {
             backgroundColor: '#224589',
           },
           headerTintColor: 'white',
-          headerTitleStyle: {
-            alignSelf: 'center',
-          },
         }}
         name="SinglePodcastScreen"
         component={SinglePodcastScreen}
@@ -213,9 +201,6 @@ const AuthNavigator = () => {
             backgroundColor: '#224589',
           },
           headerTintColor: 'white',
-          headerTitleStyle: {
-            alignSelf: 'center',
-          },
         }}
         name="MyMarketplaceScreen"
         component={MyMarketplaceScreen}
@@ -227,9 +212,6 @@ const AuthNavigator = () => {
             backgroundColor: '#224589',
           },
           headerTintColor: 'white',
-          headerTitleStyle: {
-            alignSelf: 'center',
-          },
         }}
         name="ConnectRequestsScreen"
         component={ConnectRequestsScreen}
@@ -241,9 +223,6 @@ const AuthNavigator = () => {
             backgroundColor: '#224589',
           },
           headerTintColor: 'white',
-          headerTitleStyle: {
-            alignSelf: 'center',
-          },
         }}
         name="RequestDetailsScreen"
         component={RequestDetailsScreen}
