@@ -15,7 +15,7 @@ import {faUserCircle, faCommentDots} from '@fortawesome/free-regular-svg-icons';
 
 const DrawerList = [
   {icon: faShop, label: 'My Marketplace', navigateTo: 'MyMarketplaceScreen'},
-  {icon: faUsers, label: 'My Network', navigateTo: 'HomeScreen'},
+  {icon: faUsers, label: 'My Network', navigateTo: 'MyNetworkScreen'},
   {icon: faUserCircle, label: 'My Profiles', navigateTo: 'MyProfileScreen'},
   {
     icon: faCommentDots,

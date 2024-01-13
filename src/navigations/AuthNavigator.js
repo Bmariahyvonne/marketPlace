@@ -21,6 +21,9 @@ import ConnectRequestsScreen from '../screens/ConnectRequestsScreen';
 import RequestDetailsScreen from '../screens/RequestDetailsScreen';
 import MyProfileScreen from '../screens/MyProfileScreen';
 import CorporateProfileScreen from '../screens/CorporateProfileScreen';
+import MyNetworkScreen from '../screens/MyNetworkScreen';
+import ProfilesToFollowScreen from '../screens/ProfilesToFollowScreen';
+import SingleChatScreen from '../screens/SingleChatScreen';
 import {
   faCalendar,
   faEnvelope,
@@ -293,6 +296,55 @@ const StackNav = () => {
         }}
         name="RequestDetailsScreen"
         component={RequestDetailsScreen}
+      />
+      <Stack.Screen
+        options={{
+          title: 'My Network',
+          headerStyle: {
+            backgroundColor: '#224589',
+          },
+          headerTintColor: 'white',
+          headerLeft: () => {
+            return (
+              <TouchableOpacity
+                onPress={() => navigation.dispatch(DrawerActions.openDrawer())}>
+                <FontAwesomeIcon icon={faBars} size={30} color="white" />
+              </TouchableOpacity>
+            );
+          },
+        }}
+        name="MyNetworkScreen"
+        component={MyNetworkScreen}
+      />
+      <Stack.Screen
+        options={{
+          title: 'My Network',
+          headerStyle: {
+            backgroundColor: '#224589',
+          },
+          headerTintColor: 'white',
+          headerLeft: () => {
+            return (
+              <TouchableOpacity
+                onPress={() => navigation.dispatch(DrawerActions.openDrawer())}>
+                <FontAwesomeIcon icon={faBars} size={30} color="white" />
+              </TouchableOpacity>
+            );
+          },
+        }}
+        name="ProfilesToFollowScreen"
+        component={ProfilesToFollowScreen}
+      />
+      <Stack.Screen
+        options={{
+          title: 'SingleChatScreen',
+          headerStyle: {
+            backgroundColor: '#224589',
+          },
+          headerTintColor: 'white',
+        }}
+        name="SingleChatScreen"
+        component={SingleChatScreen}
       />
     </Stack.Navigator>
   );
