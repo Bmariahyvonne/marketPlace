@@ -20,17 +20,6 @@ const ConnectRequestsScreen = props => {
         barStyle="light-content"
       />
 
-      <View style={styles.topNav}>
-        <TouchableOpacity
-          style={[styles.topButton]}
-          onPress={() => navigation.navigate('MyMarketplaceScreen')}>
-          <Text style={styles.buttonText}>CORPORATE PROFILE</Text>
-        </TouchableOpacity>
-        <View style={[styles.topButton, styles.bottomLine]}>
-          <Text style={styles.buttonText}>CONNECT REQUESTS</Text>
-        </View>
-      </View>
-
       <ScrollView style={[styles.wholePage]}>
         <TouchableOpacity
           onPress={() => navigation.navigate('RequestDetailsScreen')}>
@@ -258,7 +247,7 @@ export default ConnectRequestsScreen;
 const styles = StyleSheet.create({
   wholePage: {
     backgroundColor: '#F1F3F6',
-    height: '90%',
+    // height: '90%',
   },
   topNav: {
     width: '100%',

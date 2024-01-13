@@ -266,11 +266,19 @@ const StackNav = () => {
       />
       <Stack.Screen
         options={{
-          title: 'My Marketplace',
+          title: 'Connect Requests',
           headerStyle: {
             backgroundColor: '#224589',
           },
           headerTintColor: 'white',
+          headerLeft: () => {
+            return (
+              <TouchableOpacity
+                onPress={() => navigation.dispatch(DrawerActions.openDrawer())}>
+                <FontAwesomeIcon icon={faBars} size={30} color="white" />
+              </TouchableOpacity>
+            );
+          },
         }}
         name="ConnectRequestsScreen"
         component={ConnectRequestsScreen}

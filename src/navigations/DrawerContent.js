@@ -22,7 +22,7 @@ const DrawerList = [
     label: 'My Marletplace Groups',
     navigateTo: 'ProfileScreen',
   },
-  {icon: faUserPlus, label: 'My Connect Requests', navigateTo: 'ProfileScreen'},
+  {icon: faUserPlus, label: 'My Connect Requests', navigateTo: 'ConnectRequestsScreen'},
   {icon: faBriefcaseClock, label: 'Jobs', navigateTo: 'ProfileScreen'},
 ];
 
