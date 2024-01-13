@@ -24,6 +24,11 @@ import CorporateProfileScreen from '../screens/CorporateProfileScreen';
 import MyNetworkScreen from '../screens/MyNetworkScreen';
 import ProfilesToFollowScreen from '../screens/ProfilesToFollowScreen';
 import SingleChatScreen from '../screens/SingleChatScreen';
+import YourGroupsScreen from '../screens/YourGroupsScreen';
+import DiscoverGroupsScreen from '../screens/DiscoverGroupsScreen';
+import SingleGroupScreen from '../screens/SingleGroupScreen';
+
+
 import {
   faCalendar,
   faEnvelope,
@@ -334,6 +339,55 @@ const StackNav = () => {
         }}
         name="ProfilesToFollowScreen"
         component={ProfilesToFollowScreen}
+      />
+      <Stack.Screen
+        options={{
+          title: 'My Marketplace Groups',
+          headerStyle: {
+            backgroundColor: '#224589',
+          },
+          headerTintColor: 'white',
+          headerLeft: () => {
+            return (
+              <TouchableOpacity
+                onPress={() => navigation.dispatch(DrawerActions.openDrawer())}>
+                <FontAwesomeIcon icon={faBars} size={30} color="white" />
+              </TouchableOpacity>
+            );
+          },
+        }}
+        name="YourGroupsScreen"
+        component={YourGroupsScreen}
+      />
+      <Stack.Screen
+        options={{
+          title: 'My Marketplace Groups',
+          headerStyle: {
+            backgroundColor: '#224589',
+          },
+          headerTintColor: 'white',
+          headerLeft: () => {
+            return (
+              <TouchableOpacity
+                onPress={() => navigation.dispatch(DrawerActions.openDrawer())}>
+                <FontAwesomeIcon icon={faBars} size={30} color="white" />
+              </TouchableOpacity>
+            );
+          },
+        }}
+        name="DiscoverGroupsScreen"
+        component={DiscoverGroupsScreen}
+      />
+      <Stack.Screen
+        options={{
+          title: 'My Marketplace Groups',
+          headerStyle: {
+            backgroundColor: '#224589',
+          },
+          headerTintColor: 'white',
+        }}
+        name="SingleGroupScreen"
+        component={SingleGroupScreen}
       />
       <Stack.Screen
         options={{

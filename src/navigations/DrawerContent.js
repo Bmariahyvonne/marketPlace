@@ -20,7 +20,7 @@ const DrawerList = [
   {
     icon: faCommentDots,
     label: 'My Marletplace Groups',
-    navigateTo: 'ProfileScreen',
+    navigateTo: 'YourGroupsScreen',
   },
   {icon: faUserPlus, label: 'My Connect Requests', navigateTo: 'ConnectRequestsScreen'},
   {icon: faBriefcaseClock, label: 'Jobs', navigateTo: 'ProfileScreen'},
