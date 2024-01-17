@@ -19,11 +19,11 @@ const DrawerList = [
   {icon: faUserCircle, label: 'My Profiles', navigateTo: 'MyProfileScreen'},
   {
     icon: faCommentDots,
-    label: 'My Marletplace Groups',
+    label: 'My Marketplace Groups',
     navigateTo: 'YourGroupsScreen',
   },
   {icon: faUserPlus, label: 'My Connect Requests', navigateTo: 'ConnectRequestsScreen'},
-  {icon: faBriefcaseClock, label: 'Jobs', navigateTo: 'ProfileScreen'},
+  {icon: faBriefcaseClock, label: 'Jobs', navigateTo: 'JobsScreen'},
 ];
 
 const DrawerLayout = ({icon, label, navigateTo}) => {

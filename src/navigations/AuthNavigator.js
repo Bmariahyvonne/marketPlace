@@ -27,7 +27,11 @@ import SingleChatScreen from '../screens/SingleChatScreen';
 import YourGroupsScreen from '../screens/YourGroupsScreen';
 import DiscoverGroupsScreen from '../screens/DiscoverGroupsScreen';
 import SingleGroupScreen from '../screens/SingleGroupScreen';
-
+import SavedJobsScreen from '../screens/SavedJobsScreen';
+import JobsScreen from '../screens/JobsScreen';
+import JobDetailsScreen from '../screens/JobDetailsScreen';
+import JobApplicationScreen from '../screens/JobApplicationScreen';
+import ApplicationSubmittedScreen from '../screens/ApplicationSubmittedScreen';
 
 import {
   faCalendar,
@@ -399,6 +403,85 @@ const StackNav = () => {
         }}
         name="SingleChatScreen"
         component={SingleChatScreen}
+      />
+      <Stack.Screen
+        options={{
+          title: 'Jobs',
+          headerStyle: {
+            backgroundColor: '#224589',
+          },
+          headerTintColor: 'white',
+          headerLeft: () => {
+            return (
+              <TouchableOpacity
+                onPress={() => navigation.dispatch(DrawerActions.openDrawer())}>
+                <FontAwesomeIcon icon={faBars} size={30} color="white" />
+              </TouchableOpacity>
+            );
+          },
+        }}
+        name="JobsScreen"
+        component={JobsScreen}
+      />
+      <Stack.Screen
+        options={{
+          title: 'Jobs',
+          headerStyle: {
+            backgroundColor: '#224589',
+          },
+          headerTintColor: 'white',
+          headerLeft: () => {
+            return (
+              <TouchableOpacity
+                onPress={() => navigation.dispatch(DrawerActions.openDrawer())}>
+                <FontAwesomeIcon icon={faBars} size={30} color="white" />
+              </TouchableOpacity>
+            );
+          },
+        }}
+        name="SavedJobsScreen"
+        component={SavedJobsScreen}
+      />
+      <Stack.Screen
+        options={{
+          title: 'Job',
+          headerStyle: {
+            backgroundColor: '#224589',
+          },
+          headerTintColor: 'white',
+        }}
+        name="JobDetailsScreen"
+        component={JobDetailsScreen}
+      />
+      <Stack.Screen
+        options={{
+          title: 'Apply',
+          headerStyle: {
+            backgroundColor: '#224589',
+          },
+          headerTintColor: 'white',
+        }}
+        name="JobApplicationScreen"
+        component={JobApplicationScreen}
+      />
+      <Stack.Screen
+        options={{
+          title: 'Jobs',
+          headerStyle: {
+            backgroundColor: '#224589',
+          },
+          headerTintColor: 'white',
+          headerLeft: () => {
+            return (
+              <TouchableOpacity
+                onPress={() => navigation.dispatch(DrawerActions.openDrawer())}>
+                <FontAwesomeIcon icon={faBars} size={30} color="white" />
+              </TouchableOpacity>
+            );
+          },
+        }}
+        name="ApplicationSubmittedScreen"
+        component={ApplicationSubmittedScreen}
       />
     </Stack.Navigator>
   );
