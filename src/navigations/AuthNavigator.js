@@ -417,6 +417,7 @@ const StackNav = () => {
       />
       <Stack.Screen
         options={{
+          headerShown: false,
           title: 'SingleChatScreen',
           headerStyle: {
             backgroundColor: '#224589',
