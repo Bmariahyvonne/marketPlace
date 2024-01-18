@@ -29,9 +29,11 @@ const HomeScreen = props => {
         barStyle="dark-content"
       />
       <ScrollView style={[styles.wholePage]}>
-        <View style={[styles.headerBar]}>
+        <TouchableOpacity
+          style={[styles.headerBar]}
+          onPress={() => navigation.navigate('MessageScreen')}>
           <FontAwesomeIcon icon={regularBell} size={25} color="#224589" />
-        </View>
+        </TouchableOpacity>
 
         <View>
           <Text style={[styles.greetingBar]}>Good Morning, Joan!</Text>
@@ -84,7 +86,9 @@ const HomeScreen = props => {
           </Text>
           <View style={{flexDirection: 'row'}}>
             {/* I am going to figure out how to make the carousel work so that we can scroll through the different events. This is a placeholder for now */}
-            <View style={[styles.eventsBox]}>
+            <TouchableOpacity
+              style={[styles.eventsBox]}
+              onPress={() => navigation.navigate('EventsScreen')}>
               <Text style={[styles.eventsHeading]}>
                 INAUGURAL CONNECT FELLOWSHIP
               </Text>
@@ -128,8 +132,11 @@ const HomeScreen = props => {
                   </TouchableOpacity>
                 </Tooltip>
               </View>
-            </View>
-            <View style={[styles.eventsBox]}>
+            </TouchableOpacity>
+
+            <TouchableOpacity
+              style={[styles.eventsBox]}
+              onPress={() => navigation.navigate('EventsScreen')}>
               <Text style={[styles.eventsHeading]}>
                 INAUGURAL CONNECT FELLOWSHIP
               </Text>
@@ -168,7 +175,7 @@ const HomeScreen = props => {
                   />
                 </TouchableOpacity>
               </View>
-            </View>
+            </TouchableOpacity>
           </View>
         </View>
       </ScrollView>

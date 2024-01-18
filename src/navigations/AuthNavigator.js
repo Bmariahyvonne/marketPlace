@@ -138,6 +138,28 @@ const StackNav = () => {
       />
       <Stack.Screen
         options={{
+          title: 'Events',
+          headerStyle: {
+            backgroundColor: '#224589',
+          },
+          headerTintColor: 'white',
+        }}
+        name="EventsScreen"
+        component={EventsScreen}
+      />
+      <Stack.Screen
+        options={{
+          title: 'Inbox',
+          headerStyle: {
+            backgroundColor: '#224589',
+          },
+          headerTintColor: 'white',
+        }}
+        name="MessageScreen"
+        component={MessageScreen}
+      />
+      <Stack.Screen
+        options={{
           title: 'Resource Bank',
           headerStyle: {
             backgroundColor: '#224589', // Set the background color for Screen 1
