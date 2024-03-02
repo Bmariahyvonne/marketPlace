@@ -32,6 +32,7 @@ import JobsScreen from '../screens/JobsScreen';
 import JobDetailsScreen from '../screens/JobDetailsScreen';
 import JobApplicationScreen from '../screens/JobApplicationScreen';
 import ApplicationSubmittedScreen from '../screens/ApplicationSubmittedScreen';
+import SpecialInitiatives from '../screens/SpecialInitiatives';
 
 import {
   faCalendar,
@@ -505,6 +506,17 @@ const StackNav = () => {
         }}
         name="ApplicationSubmittedScreen"
         component={ApplicationSubmittedScreen}
+      />
+      <Stack.Screen
+        options={{
+          title: 'Special Initiatives',
+          headerStyle: {
+            backgroundColor: '#224589',
+          },
+          headerTintColor: 'white',
+        }}
+        name="SpecialInitiatives"
+        component={SpecialInitiatives}
       />
     </Stack.Navigator>
   );

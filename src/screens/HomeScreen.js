@@ -67,7 +67,8 @@ const HomeScreen = props => {
               <Text style={[styles.blueText]}>Programs</Text>
             </TouchableOpacity>
             <TouchableOpacity
-              style={[styles.cubes, {backgroundColor: '#726DA8'}]}>
+              style={[styles.cubes, {backgroundColor: '#726DA8'}]}
+              onPress={() => navigation.navigate('SpecialInitiatives')}>
               <Text style={[styles.whiteText]}>Special Initiatives</Text>
             </TouchableOpacity>
           </View>
