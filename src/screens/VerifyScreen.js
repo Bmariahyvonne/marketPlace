@@ -45,7 +45,7 @@ const VerifyScreen = props => {
         <View>
           <Text style={[styles.verifyMessage]}>Verify OTP</Text>
           <Image
-            source={require('../images/sent.png')}
+            source={require('../images/applied.png')}
             style={{
               width: 100,
               height: 100,

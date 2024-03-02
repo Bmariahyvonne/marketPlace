@@ -75,7 +75,13 @@ const SignUpScreen = props => {
           <Text style={[styles.buttonText]}>Sign up with Facebook</Text>
         </TouchableOpacity>
 
-        <View style={{flexDirection: 'row', flex: 1, padding: 20, justifyContent: 'space-around'}}>
+        <View
+          style={{
+            flexDirection: 'row',
+            flex: 1,
+            padding: 20,
+            justifyContent: 'space-around',
+          }}>
           <View style={[styles.borderLine]}></View>
           <View style={[styles.borderLine3]}>
             <Text style={{fontSize: 20}}>Or</Text>
@@ -87,10 +93,27 @@ const SignUpScreen = props => {
           <View style={styles.inputView}>
             <TextInput
               style={styles.textInput}
+              placeholder="First name"
+              placeholderTextColor="#737070"
+            />
+          </View>
+          
+          <View style={styles.inputView}>
+            <TextInput
+              style={styles.textInput}
+              placeholder="Last name"
+              placeholderTextColor="#737070"
+            />
+          </View>
+
+          <View style={styles.inputView}>
+            <TextInput
+              style={styles.textInput}
               placeholder="Email"
               placeholderTextColor="#737070"
             />
           </View>
+
           <View style={styles.inputView}>
             <TextInput
               style={styles.textInput}
@@ -99,6 +122,7 @@ const SignUpScreen = props => {
               keyboardType="numeric"
             />
           </View>
+
           <View style={styles.inputView}>
             <Dropdown
               style={styles.textInput}
@@ -123,18 +147,12 @@ const SignUpScreen = props => {
           <View style={styles.inputView}>
             <TextInput
               style={styles.textInput}
-              placeholder="NIN"
-              placeholderTextColor="#737070"
-            />
-          </View>
-          <View style={styles.inputView}>
-            <TextInput
-              style={styles.textInput}
               placeholder="Password"
               placeholderTextColor="#737070"
               secureTextEntry={true}
             />
           </View>
+
           <View style={styles.inputView}>
             <TextInput
               style={styles.textInput}
@@ -142,6 +160,7 @@ const SignUpScreen = props => {
               placeholderTextColor="#737070"
             />
           </View>
+
         </View>
 
         <View style={styles.radioContainer}>
