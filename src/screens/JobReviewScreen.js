@@ -140,9 +140,9 @@ const styles = StyleSheet.create({
   wholePage: {
     backgroundColor: '#FFFFFF',
     paddingHorizontal: 20,
-    height: '100%',
+    // height: '90%',
     paddingTop: 20,
-    marginBottom: 10,
+    paddingBottom: 10,
   },
   formContainer: {
     flex: 1,

@@ -17,7 +17,7 @@ const JobSubmittedScreen = props => {
       <ScrollView style={[styles.wholePage]}>
         <View style={{alignSelf: 'center'}}>
           <Image
-            source={require('../images/success.png')}
+            source={require('../images/applied.png')}
             style={styles.imageStyle}
           />
           <Text style={styles.thankYou}>Your job has been posted successfully</Text>

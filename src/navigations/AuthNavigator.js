@@ -547,6 +547,7 @@ const StackNav = () => {
             backgroundColor: '#224589',
           },
           headerTintColor: 'white',
+          headerBackVisible: false,
         }}
         name="JobSubmittedScreen"
         component={JobSubmittedScreen}
