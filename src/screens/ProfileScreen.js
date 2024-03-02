@@ -4,14 +4,13 @@ import {
   View,
   StatusBar,
   ScrollView,
-  Image,
   TextInput,
   TouchableOpacity,
   SafeAreaView,
 } from 'react-native';
 import React, {useState} from 'react';
 import ProgressBar from '../hooks/ProgressBar';
-import {faPencil, faCalendar} from '@fortawesome/free-solid-svg-icons';
+import {faPencil} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import RadioButtonRN from 'radio-buttons-react-native';
 import {faCalendarAlt} from '@fortawesome/free-regular-svg-icons';
@@ -41,19 +40,40 @@ const ProfileScreen = props => {
         </View>
 
         <View style={styles.formContainer}>
-          <View style={styles.inputView}>
-            <TextInput
-              style={styles.textInput}
-              placeholder="Full Name"
-              placeholderTextColor="#737070"
-            />
+          <View>
+            <Text style={styles.labelText}>First Name</Text>
+            <View style={styles.inputView}>
+              <View style={styles.textInput}>
+                <Text>Beatrice</Text>
+              </View>
+            </View>
           </View>
-          <View style={styles.inputView}>
-            <TextInput
-              style={styles.textInput}
-              placeholder="NIN"
-              placeholderTextColor="#737070"
-            />
+
+          <View>
+            <Text style={styles.labelText}>Last Name</Text>
+            <View style={styles.inputView}>
+              <View style={styles.textInput}>
+                <Text>Nakabanda</Text>
+              </View>
+            </View>
+          </View>
+
+          <View>
+            <Text style={styles.labelText}>Cell Number</Text>
+            <View style={styles.inputView}>
+              <View style={styles.textInput}>
+                <Text>E1C1A</Text>
+              </View>
+            </View>
+          </View>
+
+          <View>
+            <Text style={styles.labelText}>Proffessionr</Text>
+            <View style={styles.inputView}>
+              <View style={styles.textInput}>
+                <Text>Science and Technology</Text>
+              </View>
+            </View>
           </View>
         </View>
 
@@ -71,11 +91,9 @@ const ProfileScreen = props => {
         </View>
 
         <View style={[styles.calendarBar]}>
-          <TextInput
-            style={styles.textInput}
-            placeholder="Date of Birth"
-            placeholderTextColor="#898484"
-          />
+          <View style={styles.textInput}>
+            <Text>20.12.1990</Text>
+          </View>
           <FontAwesomeIcon
             icon={faCalendarAlt}
             size={25}
@@ -87,8 +105,8 @@ const ProfileScreen = props => {
         <View>
           <TouchableOpacity
             style={styles.saveButton}
-            onPress={() => navigation.navigate('HomeScreen')}>
-            <Text style={styles.saveColor}>SAVE</Text>
+            onPress={() => navigation.navigate('PreviewProfileScreen')}>
+            <Text style={styles.saveColor}>PREVIEW</Text>
           </TouchableOpacity>
         </View>
       </ScrollView>
@@ -101,7 +119,7 @@ export default ProfileScreen;
 const styles = StyleSheet.create({
   wholePage: {
     backgroundColor: '#FFFFFF',
-    paddingHorizontal: 20,
+    paddingHorizontal: 40,
     height: '100%',
   },
   editMessage: {
@@ -109,7 +127,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     alignSelf: 'center',
     alignItems: 'center',
-    marginTop: 60,
+    marginTop: 20,
   },
   editCircle: {
     width: 110,
@@ -122,9 +140,9 @@ const styles = StyleSheet.create({
   },
   formContainer: {
     flex: 1,
-    alignItems: 'center',
+    // alignItems: 'center',
     justifyContent: 'center',
-    marginTop: 40,
+    marginTop: 20,
   },
   calendarContainer: {
     flex: 1,
@@ -138,10 +156,10 @@ const styles = StyleSheet.create({
     borderColor: '#898484',
     borderWidth: 1,
     borderRadius: 5,
-    width: '85%',
+    width: '100%',
     height: 40,
-    marginBottom: 15,
-    alignItems: 'left',
+    marginBottom: 10,
+    // alignItems: 'left',
   },
   textInput: {
     height: 50,
@@ -159,12 +177,11 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 5,
     height: 40,
-    width: '85%',
+    width: '100%',
     marginTop: 15,
     marginBottom: 10,
     flexDirection: 'row',
     alignItems: 'center',
-    alignSelf: 'center',
   },
   saveButton: {
     backgroundColor: '#224589',
@@ -180,4 +197,5 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 14,
   },
+  labelText: {marginLeft: '2%', marginBottom: 5},
 });

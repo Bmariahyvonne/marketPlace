@@ -37,6 +37,7 @@ import ApplicationSubmittedScreen from '../screens/ApplicationSubmittedScreen';
 import SpecialInitiatives from '../screens/SpecialInitiatives';
 import JobReviewScreen from '../screens/JobReviewScreen';
 import JobSubmittedScreen from '../screens/JobSubmittedScreen';
+import PreviewProfileScreen from '../screens/PreviewProfileScreen';
 
 import {
   faCalendar,
@@ -136,6 +137,17 @@ const StackNav = () => {
         options={{headerShown: false}}
         name="ProfileScreen"
         component={ProfileScreen}
+      />
+      <Stack.Screen
+        options={{
+          title: 'Profile',
+          headerStyle: {
+            backgroundColor: '#224589',
+          },
+          headerTintColor: 'white',
+        }}
+        name="PreviewProfileScreen"
+        component={PreviewProfileScreen}
       />
       <Stack.Screen
         options={{
