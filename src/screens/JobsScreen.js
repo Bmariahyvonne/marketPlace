@@ -37,7 +37,9 @@ const JobsScreen = props => {
         </TouchableOpacity>
       </View>
 
-      <TouchableOpacity style={styles.postButton}>
+      <TouchableOpacity
+        style={styles.postButton}
+        onPress={() => navigation.navigate('JobCompanyScreen')}>
         <Text style={styles.postJobText}>Post a job</Text>
         <FontAwesomeIcon icon={faPenToSquare} size={20} color="#224589" />
       </TouchableOpacity>

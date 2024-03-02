@@ -31,8 +31,12 @@ import SavedJobsScreen from '../screens/SavedJobsScreen';
 import JobsScreen from '../screens/JobsScreen';
 import JobDetailsScreen from '../screens/JobDetailsScreen';
 import JobApplicationScreen from '../screens/JobApplicationScreen';
+import JobCompanyScreen from '../screens/JobCompanyScreen';
+import JobDescriptionScreen from '../screens/JobDescriptionScreen';
 import ApplicationSubmittedScreen from '../screens/ApplicationSubmittedScreen';
 import SpecialInitiatives from '../screens/SpecialInitiatives';
+import JobReviewScreen from '../screens/JobReviewScreen';
+import JobSubmittedScreen from '../screens/JobSubmittedScreen';
 
 import {
   faCalendar,
@@ -43,11 +47,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import {createDrawerNavigator} from '@react-navigation/drawer';
-import {
-  NavigationContainer,
-  useNavigation,
-  DrawerActions,
-} from '@react-navigation/native';
+import {useNavigation, DrawerActions} from '@react-navigation/native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import DrawerContent from './DrawerContent';
 
@@ -506,6 +506,50 @@ const StackNav = () => {
         }}
         name="ApplicationSubmittedScreen"
         component={ApplicationSubmittedScreen}
+      />
+      <Stack.Screen
+        options={{
+          title: 'Post a Job',
+          headerStyle: {
+            backgroundColor: '#224589',
+          },
+          headerTintColor: 'white',
+        }}
+        name="JobCompanyScreen"
+        component={JobCompanyScreen}
+      />
+      <Stack.Screen
+        options={{
+          title: 'Post a Job',
+          headerStyle: {
+            backgroundColor: '#224589',
+          },
+          headerTintColor: 'white',
+        }}
+        name="JobDescriptionScreen"
+        component={JobDescriptionScreen}
+      />
+      <Stack.Screen
+        options={{
+          title: 'Post a Job',
+          headerStyle: {
+            backgroundColor: '#224589',
+          },
+          headerTintColor: 'white',
+        }}
+        name="JobReviewScreen"
+        component={JobReviewScreen}
+      />
+      <Stack.Screen
+        options={{
+          title: 'Job Posted',
+          headerStyle: {
+            backgroundColor: '#224589',
+          },
+          headerTintColor: 'white',
+        }}
+        name="JobSubmittedScreen"
+        component={JobSubmittedScreen}
       />
       <Stack.Screen
         options={{
